@@ -1,12 +1,5 @@
-@font-face {
-    font-family: 'Kiwi Maru';
-    src: url('../fonts/kiwi-maru.woff2') format('woff2');
-}
 
 :root {
-    /* Tipografía */
-    --fuente-principal: 'Kiwi Maru', sans-serif;
-
     /* Bordes */
     --borde-redondo-tarjeta: 30px;
     --borde-redondo-navbar-buscador: 30px;

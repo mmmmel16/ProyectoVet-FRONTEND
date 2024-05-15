@@ -1,0 +1,33 @@
+@import 'css/estilosBase.css';
+
+.seccion{
+    color: black;
+}
+
+.seccion:hover{
+    color: var(--color-primario);
+}
+
+.fondoNav{
+    background-color: snow;
+    border-radius: var(--borde-redondo-navbar-buscador);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ButtonSecondary{
+    border-radius: var(--borde-redondo-botones-navbar-buscador);
+    background-color: var(--color-primario);
+}
+
+.ButtonPrimary{
+    border-radius: var(--borde-redondo-botones-navbar-buscador);
+    background-color: var(--color-secundario);
+}
+
+.ButtonPrimary:hover{
+    border-color: black;
+}
+
+.ButtonSecondary:hover{
+    border-color: black;
+}
