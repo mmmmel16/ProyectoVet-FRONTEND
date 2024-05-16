@@ -1,0 +1,28 @@
+@import 'css/estilosBase.css';
+
+.bienvenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-primario);
+    width: 300px;
+    border-radius: var(--borde-redondo-botones-navbar-buscador);
+    margin-top: 10%;
+}
+
+.seccionHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formularioHome{
+    border-radius: var(--borde-redondo-navbar-buscador);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputBuscar{
+    border: none;
+    width: 100%;
+    padding-left: 2%;
+}

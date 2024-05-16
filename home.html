@@ -11,8 +11,9 @@
     <!-- ========== Bootstrap  ========== -->
     
     <!-- ========== CSS ========== -->
-    <link rel="stylesheet" href="css/#">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/estilosBase.css">
+    <link rel="stylesheet" href="css/navBar.css">
     <!-- ========== CSS ========== -->
 
     <!-- ========== Font Awesome ========== -->
@@ -20,6 +21,35 @@
     <!-- ========== Font Awesome ========== -->
 </head>
 <body>
-    
+    <!-- ========== NavBar ========== -->
+    <nav class="navbar fondoNav">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="Logo" width="70" height="70">
+          </a>
+          <ul class="nav nav-underline">
+            <li class="nav-item">
+                <button type="button" class="btn btn-lg ButtonSecondary"> <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Iniciar sesión</button>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <!-- ========== navBar ========== -->
+    <section class="seccionHome">
+      <article class="bienvenido">
+        <h1>¡Bienvenido!<img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" style="margin-bottom: 9px; margin-left: 6px;"></h1>
+      </article>
+    </section>
+    <section class="m-lg-5 text-center">
+      <article>
+        <p>Busque al animal por identificador</p>
+      </article>
+      <article>
+        <form class="d-flex formularioHome" role="search">
+          <input class="inputBuscar" type="search" placeholder="Escriba el id del animal" aria-label="Buscador">
+          <button class="btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+      </article>
+    </section>
 </body>
 </html>
