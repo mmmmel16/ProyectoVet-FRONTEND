@@ -1,0 +1,34 @@
+@import 'css/estilosBase.css';
+
+.fondoBody{
+    background-image: url(/img/Fondo.png);
+}
+
+.tarjetaGrande{
+    background-color: var(--color-secundario);
+    margin: 2% 5%;
+}
+
+.botonGoogle{
+    background-color: var(--color-primario);
+}
+
+.botonGoogle:hover{
+    border: 1px solid black;
+    background-color: white;
+}
+
+.olvidarContraseña{
+    text-decoration: none;
+}
+
+.botonSesion{
+    background-color: black;
+    color: white;
+}
+
+.botonSesion:hover{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
