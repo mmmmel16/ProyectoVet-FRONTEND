@@ -1,5 +1,9 @@
 @import 'css/estilosBase.css';
 
+body{
+    background-image: url(/img/Fondo.png);
+}
+
 .bienvenido{
     display: flex;
     flex-direction: column;
@@ -7,7 +11,7 @@
     border: 1px solid var(--color-primario);
     width: 300px;
     border-radius: var(--borde-redondo-botones-navbar-buscador);
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .seccionHome{
@@ -17,6 +21,7 @@
 }
 
 .formularioHome{
+    background-color: white;
     border-radius: var(--borde-redondo-navbar-buscador);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
 }
