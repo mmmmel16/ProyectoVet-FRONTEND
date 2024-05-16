@@ -32,3 +32,37 @@ body{
     width: 100%;
     padding-left: 2%;
 }
+
+/*Nuevo*/
+
+.btnFlecha{
+    background-color: var(--color-secundario);
+}
+
+.btnFlecha:hover{
+    background-color: var(--color-primario);
+}
+
+.paddingPerro{
+    padding-right: 8%;
+}
+
+.tarjeta{
+    border-radius: var(--borde-redondo-tarjeta);
+    width: 15rem;
+    height: 18rem;
+}
+
+.fondoSeccion{
+    margin: 0 3.8%;
+    background-color: var(--color-primario);
+    padding: 2%;
+    border-radius: var(--borde-redondo-tarjeta);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.textoTarjeta{
+    font-weight: bold;
+}

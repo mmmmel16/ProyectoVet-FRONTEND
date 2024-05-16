@@ -9,7 +9,7 @@
 }
 
 .fondoNav{
-    background-color: snow;
+    background-color: white;
     border-radius: var(--borde-redondo-navbar-buscador);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
 }
