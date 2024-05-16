@@ -11,7 +11,7 @@ body{
     border: 1px solid var(--color-primario);
     width: 300px;
     border-radius: var(--borde-redondo-botones-navbar-buscador);
-    margin-top: 15%;
+    margin-top: 15%; 
 }
 
 .seccionHome{
