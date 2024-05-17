@@ -11,6 +11,8 @@
 
 .botonGoogle{
     background-color: var(--color-primario);
+    height: 120%;
+    font-weight: 500;
 }
 
 .botonGoogle:hover{
@@ -31,4 +33,43 @@
     background-color: white;
     border: 1px solid black;
     color: black;
+}
+
+.cardCustome{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.formularioSesion{
+    width: 80%;
+}
+
+.lined-text{
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: black;
+}
+
+.lined-text::before,
+.lined-text::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 250px;
+    border-top: 2px solid black;
+    transform: translateY(150%);
+}
+
+.lined-text::before{
+    left: 0;
+    margin-left: -300px;
+}
+
+.lined-text::after{
+    right: 0;
+    margin-right: -300px;
 }

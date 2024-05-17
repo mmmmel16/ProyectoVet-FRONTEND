@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/estilosBase.css">
   <link rel="stylesheet" href="css/navBar.css">
   <!-- ========== CSS ========== -->
+
   <!-- ========== Font Awesome ========== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- ========== Font Awesome ========== -->
@@ -23,7 +24,7 @@
   <div class="card tarjetaGrande">
     <div class="row">
       <div class="col-md-7">
-        <div class="card-body h-100">
+        <div class="card-body h-100 cardCustome">
           <section class="text-center">
             <h1 class="card-title">¡Hola!</h1>
             <h4 class="card-text">Bienvenido a ________</h4>
@@ -31,16 +32,17 @@
           <section class="text-center">
             <button type="button" class="btn botonGoogle"><img src="img/iconGoogle.png" alt="">Iniciar sesión con Google</button>
           </section>
-          <section>
-            <input type="email" class="form-control" id="FormControlInput1" placeholder="Correo electronico">
-            <input type="password" id="inputPassword" placeholder="Contraseña" class="form-control" aria-describedby="passwordHelpBlock">
+          <section class="text-center">
+            <h4 class="lined-text">o</h4>
           </section>
-          <section class="text-end">
+          <section class="text-end formularioSesion">
+            <input type="email" class="form-control" id="FormControlInput1" placeholder="Correo electronico">
+            <input type="password" id="inputPassword" placeholder="Contraseña" class="form-control mt-3" aria-describedby="passwordHelpBlock">
             <a href="#" class="olvidarContraseña">¿Olvidaste tu contraseña?</a>
           </section>
-          <section class="text-center">
-            <button type="button" class="btn btn-lg botonSesion">Iniciar sesión</button>
-          </section>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn botonSesion" type="button">Iniciar sesión</button>
+          </div>
         </div>
       </div>
       <div class="col-md-5 g-0">
