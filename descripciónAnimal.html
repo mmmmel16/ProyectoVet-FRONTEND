@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/estilosBase.css">
   <link rel="stylesheet" href="css/navBar.css">
   <!-- ========== CSS ========== -->
+
   <!-- ========== Font Awesome ========== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- ========== Font Awesome ========== -->
@@ -92,13 +93,13 @@
             <div class="col-12 col-md-auto mt-2">
               <div class="d-flex justify-content-center justify-content-md-start">
                 <span class="badge rounded-pill id">ID ____</span>
-                <span class="badge rounded-pill castrado mx-2">Castrado</span>
+                <span id="castrado"  class="badge rounded-pill castrado mx-2">Castrado</span>
               </div>
             </div>
             <div class="col-12 col-md"></div>
             <div class="col-12 col-md-auto">
               <a href="#" class="text-decoration-none text-black">
-                <i class="fas fa-print mx-2 fa-2x" aria-hidden="true" onclick="window.print()"></i>
+                <i class="fas fa-print mx-2 fa-2x" aria-hidden="true" onclick="printReport()"></i>
               </a>
               <a href="#" class="text-decoration-none text-black">
                 <i class="far fa-trash-alt mx-2 fa-2x" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#modalBorrar"></i>
@@ -144,7 +145,7 @@
       <div class="card cardDueño mt-4">
         <div class="card-body d-flex">
           <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mt-1">
-          <div class="d-flex flex-column">
+          <div class="d-flex flex-column w-100">
             <h2 class="card-title mx-3 text-black">Vacunas</h2>
 
             <!-- Tabla -->
@@ -205,6 +206,64 @@
   </div>
   <!-- ========== Contenido ========== -->
 
+  <!-- ========== Historia clínica (print) ========== -->
+  <div id="customReport" class="d-none">
+    <h1>Historia clínica</h1>
+    <p><strong>ID del Animal:</strong> 123456</p>
+    <p><strong>Nombre del Animal:</strong> Chocolate blanco</p>
+    <p><strong>Datos del Dueño:</strong> Calle 110 y 4, General Pico, La Pampa</p>
+    <p><strong>Características del Animal:</strong> 
+      <ul>
+        <li><strong>Tamaño:</strong> Mediano</li>
+        <li><strong>Raza:</strong> Mestizo</li>
+        <li><strong>Color:</strong> Marrón claro</li>
+        <li><strong>Edad:</strong> 2 años</li>
+        <li><strong>Sexo:</strong> Macho</li>
+      </ul>
+    </p>
+    <p><strong>Fecha de Castración:</strong> 24/04/24</p>
+    <p><strong>Vacunas:</strong> 
+    <table class="table table-bordered border-black mt-2">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Dosis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Moquillo </td>
+          <td class="text-center">24/04/24</td>
+          <td class="text-center">1</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Gripe felina</td>
+          <td class="text-center">24/04/24</td>
+          <td class="text-center">2</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Leucemia</td>
+          <td class="text-center">24/04/24</td>
+          <td class="text-center">2</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Peritonitis infeciosa felina</td>
+          <td class="text-center">24/04/24</td>
+          <td class="text-center">2</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Informe:</strong></p>
+    <p>Macho común europea de un año, negativo a leucemia e inmunodeficiencia felina, sin contacto con otros animales y no accede al exterior. Durante los días previos a la consulta los propietarios describen debilidad, apatía y decaimiento, con hiporexia y apetito caprichoso asociado. Estos signos motivaron una consulta en su centro veterinario habitual, donde observaron taquipnea y palidez severa de las mucosas, por lo que decidieron transferir el caso a un centro de urgencias.</p> 
+  </div>
+  <!-- ========== Historia clínica (print) ========== -->
+
   <!-- ========== Modal ========== -->
   <!-- MODAL BORRAR -->
   <div class="modal" tabindex="-1" id="modalBorrar" aria-labelledby="modalBorrar" aria-hidden="true">
@@ -227,6 +286,7 @@
   <!-- ========== Modal ========== -->
   
   <!-- ========== Bootstrap JS ========== -->
+  <script src="/js/descripciónAnimal.js"></script>
   <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   <!-- ========== Bootstrap JS ========== -->
 </body>
