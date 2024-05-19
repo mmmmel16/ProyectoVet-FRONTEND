@@ -9,7 +9,7 @@
   <!-- ========== Bootstrap  ========== -->
   
   <!-- ========== CSS ========== -->
-  <link rel="stylesheet" href="css/navBar.css">
+  <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/estilosBase.css">
   <!-- ========== CSS ========== -->
   
@@ -20,29 +20,50 @@
 </head>
 <body>
   <!-- ========== Navbar ========== -->
-  <nav class="navbar fondoNav">
+  <nav class="navbar navbar-expand-lg fondoNav">
     <div class="container">
-      <a class="navbar-brand" href="homeAdmin.html">
+      <!-- Menu hamburguesa -->
+      <div class="nav-item dropdown hamburguesa-menu">
+        <a class="nav-link icono" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item active bg-success" href="#">Inicio</a></li>
+          <li><a class="dropdown-item" href="#">Perros</a></li>
+          <li><a class="dropdown-item" href="#">Gatos</a></li>
+          <li><a class="dropdown-item" href="#">Vacunación</a></li>
+          <li><a class="dropdown-item" href="#">Castración</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
         <img src="img/logo.png" alt="Logo" width="70" height="70">
       </a>
-      <ul class="nav nav-underline">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="homeAdmin.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link seccion" href="#">Perros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link seccion" href="#">Gatos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link seccion" href="#">Vacunación</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link seccion" href="#">Castración</a>
-        </li>
-      </ul>
-      <ul class="nav nav-underline">
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="homeAdmin.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Perros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Gatos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Vacunación</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Castración</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Botones -->
+      <ul class="nav nav-underline botones">
         <li class="nav-item">
           <button type="button" class="btn btn-lg ButtonPrimary"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
         </li>

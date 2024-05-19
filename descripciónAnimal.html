@@ -20,29 +20,50 @@
 </head>
 <body>
   <!-- ========== Navbar ========== -->
-  <nav class="navbar fondoNav">
+  <nav class="navbar navbar-expand-lg fondoNav">
     <div class="container">
+      <!-- Menu hamburguesa -->
+      <div class="nav-item dropdown hamburguesa-menu">
+        <a class="nav-link icono" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="homeAdmin.html">Inicio</a></li>
+          <li><a class="dropdown-item" href="#">Perros</a></li>
+          <li><a class="dropdown-item" href="#">Gatos</a></li>
+          <li><a class="dropdown-item" href="#">Vacunación</a></li>
+          <li><a class="dropdown-item" href="#">Castración</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
       <a class="navbar-brand" href="homeAdmin.html">
         <img src="img/logo.png" alt="Logo" width="70" height="70">
       </a>
-      <ul class="nav nav-underline">
-        <li class="nav-item">
-          <a class="nav-link seccion" aria-current="page" href="homeAdmin.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link seccion" href="#">Perros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link seccion" href="#">Gatos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link seccion" href="#">Vacunación</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link seccion" href="#">Castración</a>
-        </li>
-      </ul>
-      <ul class="nav nav-underline">
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link seccion" aria-current="page" href="homeAdmin.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Perros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Gatos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Vacunación</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Castración</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Botones -->
+      <ul class="nav nav-underline botones">
         <li class="nav-item">
           <button type="button" class="btn btn-lg ButtonPrimary"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
         </li>
@@ -56,9 +77,9 @@
 
   <!-- ========== Contenido ========== -->
   <div class="container-fluid" id="contenido">
-    <!-- Fila 1-->
+    <!-- Fila 1 -->
     <div class="row mt-4">
-      <!-- Columna 1-->
+      <!-- Columna 1 -->
       <div class="col-md-1">
         <img src="/img/imagenDescripcion1.png" class="object-fit-none items my-1 img-fluid" alt="">
         <img src="/img/imagenDescripcion2.png" class="object-fit-none items my-1 img-fluid" alt="">
@@ -69,7 +90,7 @@
         </a>
       </div>
 
-      <!-- Columna 2-->
+      <!-- Columna 2 -->
       <div class="col-md-4">
         <img src="/img/imagenDescripcion3.png" class="object-fit-none item img-fluid" alt="...">
         <div class="text-center my-4">
@@ -86,7 +107,7 @@
         </div>
       </div>
 
-      <!-- Columna 3-->
+      <!-- Columna 3 -->
       <div class="col-md-7 px-4">
         <div class="container text-center">
           <div class="row">
@@ -129,7 +150,7 @@
       </div>
     </div>
 
-    <!-- Fila 2-->
+    <!-- Fila 2 -->
     <div class="row">
       <div class="card cardDueño mt-4">
         <div class="card-body d-flex align-items-center">
@@ -190,7 +211,7 @@
       </div>
     </div>
 
-    <!-- Fila 4-->
+    <!-- Fila 4 -->
     <div class="row">
       <div class="card cardDueño mt-4">
         <div class="card-body d-flex">
