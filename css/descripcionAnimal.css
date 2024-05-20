@@ -44,3 +44,20 @@
     padding: 2rem;
 }
 
+/* Móvil */
+@media (max-width: 767.98px) {
+    .imagenes{
+        display: none;
+    }
+
+    .rowPC{
+        display: none;
+    }
+}
+
+/* PC */
+@media (min-width: 992px) {
+    .rowMovil{
+        display: none;
+    }
+}

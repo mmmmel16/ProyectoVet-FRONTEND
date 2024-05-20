@@ -32,3 +32,19 @@ body{
     width: 100%;
     padding-left: 2%;
 }
+
+/* Móvil */
+@media (max-width: 767.98px) {
+    .bienvenido{
+        margin-top: 2rem;
+        padding-top: 0.5rem;
+    }
+
+    .subtitulo{
+        margin-top: 1.5rem;
+    }
+
+    .formularioHome{
+        margin: 0 1.5rem;
+    }
+}
