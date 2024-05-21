@@ -1,0 +1,59 @@
+@import 'css/estilosBase.css';
+
+.seccion{
+    color: black;
+}
+
+.seccion:hover{
+    color: var(--color-primario);
+}
+
+.fondoNav{
+    background-color: white;
+    border-radius: var(--borde-redondo-navbar-buscador);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ButtonSecondary{
+    border-radius: var(--borde-redondo-botones-navbar-buscador);
+    background-color: var(--color-primario);
+}
+
+.ButtonPrimary{
+    border-radius: var(--borde-redondo-botones-navbar-buscador);
+    background-color: var(--color-secundario);
+}
+
+.ButtonPrimary:hover{
+    border-color: black;
+}
+
+.ButtonSecondary:hover{
+    border-color: black;
+}
+
+/* Móvil */
+@media (max-width: 767.98px) {
+    .ButtonPrimary, .ButtonSecondary {
+        font-size: 0.6rem;
+        font-weight: bold;
+        padding: 0.25rem 0.5rem;
+    }
+    .icono{
+        margin-left: 1rem;
+    }
+    .botones{
+        margin-right: 1rem;
+    }
+
+    .dropdown-item:hover{
+        background-color: #1887535d;
+    }
+}
+
+/* PC */
+@media (min-width: 992px) {
+    .hamburguesa-menu {
+        display: none;
+    }
+}

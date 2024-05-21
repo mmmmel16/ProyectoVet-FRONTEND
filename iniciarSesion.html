@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- ========== Bootstrap  ========== -->
+  <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <!-- ========== Bootstrap  ========== -->
+  
+  <!-- ========== CSS ========== -->
+  <link rel="stylesheet" href="css/inicioSesion.css">
+  <link rel="stylesheet" href="css/estilosBase.css">
+  <link rel="stylesheet" href="css/navBar.css">
+  <!-- ========== CSS ========== -->
+
+  <!-- ========== Font Awesome ========== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- ========== Font Awesome ========== -->
+  
+</head>
+<body class="fondoBody">
+  <!-- ========== Contenido ========== -->
+  <div class="card tarjetaGrande">
+    <div class="row">
+      <!-- Columna formulario -->
+      <div class="col-md-7">
+        <div class="card-body cardCustome h-100">
+
+          <!-- Formulario  -->
+          <form action="" id="formularioSesion" class="formularioSesion">
+            <div class="my-5">
+              <h1 class="card-title">¡Hola!</h1>
+              <h4 class="card-text">Bienvenido a ________</h4>
+            </div>
+            <input type="email" class="form-control" id="inputCorreo" placeholder="Correo electrónico">
+            <div id="alertaCorreo" class="text-danger text-start px-2 d-none">Ingrese un correo válido.</div>
+            <input type="password" id="inputPassword" placeholder="Contraseña" class="form-control mt-3" aria-describedby="passwordHelpBlock">
+            <div id="alertaPassword" class="text-danger text-start px-2 d-none">Ingrese una contraseña.</div>
+            <div class="d-grid gap-2 col-6 mx-auto my-5">
+              <button class="btn botonSesion" type="button" onclick="validarFormulario()">Iniciar sesión</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Columna foto -->
+      <div class="col-md-5 g-0">
+        <img src="img/fotoGatoPerro.png" class="img-fluid rounded-end" alt="foto de gato y perro">
+      </div>
+      
+    </div>
+  </div>
+  <!-- ========== Contenido ========== -->
+
+  <!-- ========== JS ========== -->
+  <script src="/js/inicioSesion.js"></script>
+  <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ========== JS ========== -->
+</body>
+</html>

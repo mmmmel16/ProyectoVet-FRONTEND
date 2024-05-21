@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- ========== Bootstrap  ========== -->
+  <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <!-- ========== Bootstrap  ========== -->
+  
+  <!-- ========== CSS ========== -->
+  <link rel="stylesheet" href="css/descripcionAnimal.css">
+  <link rel="stylesheet" href="css/estilosBase.css">
+  <link rel="stylesheet" href="css/navBar.css">
+  <!-- ========== CSS ========== -->
+
+  <!-- ========== Font Awesome ========== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- ========== Font Awesome ========== -->
+</head>
+<body>
+  <!-- ========== Navbar ========== -->
+  <nav class="navbar navbar-expand-lg fondoNav">
+    <div class="container">
+      <!-- Menu hamburguesa -->
+      <div class="nav-item dropdown hamburguesa-menu">
+        <a class="nav-link icono" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="homeAdmin.html">Inicio</a></li>
+          <li><a class="dropdown-item" href="#">Perros</a></li>
+          <li><a class="dropdown-item" href="#">Gatos</a></li>
+          <li><a class="dropdown-item" href="#">Vacunación</a></li>
+          <li><a class="dropdown-item" href="#">Castración</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="homeAdmin.html">
+        <img src="img/logo.png" alt="Logo" width="70" height="70">
+      </a>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link seccion" aria-current="page" href="homeAdmin.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Perros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Gatos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Vacunación</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Castración</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Botones -->
+      <ul class="nav nav-underline botones">
+        <li class="nav-item">
+          <button type="button" class="btn btn-lg ButtonPrimary"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-lg ButtonSecondary" onclick="window.location.href = 'home.html';"> <i class="fas fa-sign-out-alt" aria-hidden="true"></i> Cerrar sesión</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- ========== navbar ========== -->
+
+  <!-- ========== Contenido ========== -->
+  <div class="container-fluid" id="contenido">
+    <!-- Fila 1 -->
+    <div class="row rowPC mt-4">
+      <!-- Columna 1 -->
+      <div class="col-md-1 imagenes d-flex flex-column">
+        <img src="/img/imagenDescripcion1.png" class="items my-1 img-fluid" alt="">
+        <img src="/img/imagenDescripcion2.png" class="items my-1 img-fluid" alt="">
+        <a href="#" class="text-decoration-none text-black">
+          <div class="items my-1 py-2 d-flex align-items-center justify-content-center">
+            <i class="far fa-plus-square fa-2x" aria-hidden="true"></i>
+          </div>
+        </a>
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="col-md-4">
+        <img src="/img/imagenDescripcion3.png" class="object-fit-none item img-fluid" alt="...">
+        <div class="text-center my-4">
+          <h5>Inscripto desde _______</h5>
+        </div>
+        <div class="card tarjetaCara px-5 py-2">
+          <div class="card-body">
+            <p class="card-text">Tamaño:  _______</p>
+            <p class="card-text">Raza:  _______</p>
+            <p class="card-text">Color:  _______</p>
+            <p class="card-text">Edad:  _______</p>
+            <p class="card-text">Sexo:  _______</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna 3 -->
+      <div class="col-md-7 px-4">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-md-auto mt-2">
+              <div class="d-flex justify-content-center justify-content-md-start">
+                <span class="badge rounded-pill id">ID ____</span>
+                <span id="castrado"  class="badge rounded-pill castrado mx-2">Castrado</span>
+              </div>
+            </div>
+            <div class="col-12 col-md"></div>
+            <div class="col-12 col-md-auto">
+              <a href="#" class="text-decoration-none text-black">
+                <i class="fas fa-print mx-2 fa-2x" aria-hidden="true" onclick="printReport()"></i>
+              </a>
+              <a href="#" class="text-decoration-none text-black">
+                <i class="far fa-trash-alt mx-2 fa-2x" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#modalBorrar"></i>
+              </a>
+              <a href="#" class="text-black text-decoration-none">
+                <i class="far fa-edit m-2 fa-2x" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <h1 class="my-4">Chocolate blanco</h1>
+        <!-- Dueño -->
+        <div class="card cardDueño">
+          <div class="card-body">
+            <h5 class="card-title">Dueño:</h5>
+            <ul>
+              <li>__________________________</li>
+              <li>__________________________</li>
+              <li>___________________________</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Mapa -->
+        <div class="my-4">
+          <iframe class="rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51866.44198844432!2d-63.79239766426402!3d-35.660929295895556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c37d4f9847b43f%3A0x6b4fc7aecf7b9d89!2sGral.%20Pico%2C%20La%20Pampa!5e0!3m2!1ses-419!2sar!4v1715980335050!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila 1 para movil (OCULTO A PC)-->
+    <div class="row rowMovil">
+      <!-- Columna 1 -->
+      <div class="col-md-7 px-4 my-3">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-md-auto">
+              <a href="#" class="text-decoration-none text-black">
+                <i class="fas fa-print mx-2 fa-2x" aria-hidden="true" onclick="printReport()"></i>
+              </a>
+              <a href="#" class="text-decoration-none text-black">
+                <i class="far fa-trash-alt mx-2 fa-2x" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#modalBorrar"></i>
+              </a>
+              <a href="#" class="text-black text-decoration-none">
+                <i class="far fa-edit m-2 fa-2x" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="col-12 col-md"></div>
+            <div class="col-12 col-md-auto mt-2">
+              <div class="d-flex justify-content-center justify-content-md-start">
+                <span class="badge rounded-pill id">ID ____</span>
+                <span id="castrado"  class="badge rounded-pill castrado mx-2">Castrado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="col-md-4">
+        <img src="/img/imagenDescripcion3.png" class="object-fit-none item img-fluid" alt="...">
+        <h1 class="my-4">Chocolate blanco</h1>
+        <!-- Dueño -->
+        <div class="card cardDueño">
+          <div class="card-body">
+            <h5 class="card-title">Dueño:</h5>
+            <ul>
+              <li>__________________________</li>
+              <li>__________________________</li>
+              <li>___________________________</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Mapa -->
+        <div class="my-4">
+          <iframe class="rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51866.44198844432!2d-63.79239766426402!3d-35.660929295895556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c37d4f9847b43f%3A0x6b4fc7aecf7b9d89!2sGral.%20Pico%2C%20La%20Pampa!5e0!3m2!1ses-419!2sar!4v1715980335050!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="text-center my-4">
+          <h5>Inscripto desde _______</h5>
+        </div>
+        <div class="card tarjetaCara px-5 py-2">
+          <div class="card-body">
+            <p class="card-text">Tamaño:  _______</p>
+            <p class="card-text">Raza:  _______</p>
+            <p class="card-text">Color:  _______</p>
+            <p class="card-text">Edad:  _______</p>
+            <p class="card-text">Sexo:  _______</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="row">
+      <div class="card cardDueño mt-4">
+        <div class="card-body d-flex align-items-center">
+          <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mb-1">
+          <h2 class="card-title mx-3 text-black">Castrado</h2>
+          <h5 class="mt-1 mx-1">24/04/24</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila 3 -->
+    <div class="row">
+      <div class="card cardDueño mt-4">
+        <div class="card-body d-flex">
+          <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mt-1">
+          <div class="d-flex flex-column">
+            <h2 class="card-title mx-3 text-black">Vacunas</h2>
+
+            <!-- Tabla -->
+            <table class="table table-bordered border-black mt-3">
+              <thead>
+                <tr class="text-center">
+                  <th scope="col">#</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Dosis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td class="text-center">24/04/24</td>
+                  <td>Moquillo </td>
+                  <td class="text-center">1</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td class="text-center">24/04/24</td>
+                  <td>Gripe felina</td>
+                  <td class="text-center">2</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td class="text-center">24/04/24</td>
+                  <td>Leucemia</td>
+                  <td class="text-center">2</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td class="text-center">24/04/24</td>
+                  <td>Peritonitis infeciosa felina</td>
+                  <td class="text-center">2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila 4 -->
+    <div class="row">
+      <div class="card cardDueño mt-4">
+        <div class="card-body d-flex">
+          <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mt-1">
+        
+          <div class="d-flex flex-column">
+            <h2 class="card-title mx-3 text-black">Informe</h2>
+            <p class="mt-2">Macho común europea de un año, negativo a leucemia e inmunodeficiencia felina, sin contacto con otros animales y no accede al exterior. Durante los días previos a la consulta los propietarios describen debilidad, apatía y decaimiento, con hiporexia y apetito caprichoso asociado. Estos signos motivaron una consulta en su centro veterinario habitual, donde observaron taquipnea y palidez severa de las mucosas, por lo que decidieron transferir el caso a un centro de urgencias.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========== Contenido ========== -->
+
+  <!-- ========== Historia clínica (print) ========== -->
+  <div id="customReport" class="d-none">
+    <h1>Historia clínica</h1>
+    <p><strong>ID del Animal:</strong> 123456</p>
+    <p><strong>Nombre del Animal:</strong> Chocolate blanco</p>
+    <p><strong>Datos del Dueño:</strong> Calle 110 y 4, General Pico, La Pampa</p>
+    <p><strong>Características del Animal:</strong> 
+      <ul>
+        <li><strong>Tamaño:</strong> Mediano</li>
+        <li><strong>Raza:</strong> Mestizo</li>
+        <li><strong>Color:</strong> Marrón claro</li>
+        <li><strong>Edad:</strong> 2 años</li>
+        <li><strong>Sexo:</strong> Macho</li>
+      </ul>
+    </p>
+    <p><strong>Fecha de Castración:</strong> 24/04/24</p>
+    <p><strong>Vacunas:</strong> 
+    <table class="table table-bordered border-black mt-2">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Dosis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Moquillo </td>
+          <td class="text-center">24/04/24</td>
+          <td class="text-center">1</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Gripe felina</td>
+          <td class="text-center">24/04/24</td>
+          <td class="text-center">2</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Leucemia</td>
+          <td class="text-center">24/04/24</td>
+          <td class="text-center">2</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Peritonitis infeciosa felina</td>
+          <td class="text-center">24/04/24</td>
+          <td class="text-center">2</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Informe:</strong></p>
+    <p>Macho común europea de un año, negativo a leucemia e inmunodeficiencia felina, sin contacto con otros animales y no accede al exterior. Durante los días previos a la consulta los propietarios describen debilidad, apatía y decaimiento, con hiporexia y apetito caprichoso asociado. Estos signos motivaron una consulta en su centro veterinario habitual, donde observaron taquipnea y palidez severa de las mucosas, por lo que decidieron transferir el caso a un centro de urgencias.</p> 
+  </div>
+  <!-- ========== Historia clínica (print) ========== -->
+
+  <!-- ========== Modal ========== -->
+  <!-- MODAL BORRAR -->
+  <div class="modal" tabindex="-1" id="modalBorrar" aria-labelledby="modalBorrar" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">¿Estás seguro de eliminar?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>El registro del animal va a borrarse permanentemente.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========== Modal ========== -->
+  
+  <!-- ========== Bootstrap JS ========== -->
+  <script src="/js/descripciónAnimal.js"></script>
+  <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ========== Bootstrap JS ========== -->
+</body>
+</html>
