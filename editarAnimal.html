@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- ========== Bootstrap  ========== -->
+  <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <!-- ========== Bootstrap  ========== -->
+  
+  <!-- ========== CSS ========== -->
+  <link rel="stylesheet" href="css/#">
+  <link rel="stylesheet" href="css/estilosBase.css">
+  <link rel="stylesheet" href="css/navBar.css">
+  <!-- ========== CSS ========== -->
+
+  <!-- ========== Font Awesome ========== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- ========== Font Awesome ========== -->
+</head>
+<body>
+  <!-- ========== Navbar ========== -->
+  <nav class="navbar navbar-expand-lg fondoNav">
+    <div class="container">
+      <!-- Menu hamburguesa -->
+      <div class="nav-item dropdown hamburguesa-menu">
+        <a class="nav-link icono" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="homeAdmin.html">Inicio</a></li>
+          <li><a class="dropdown-item" href="#">Perros</a></li>
+          <li><a class="dropdown-item" href="#">Gatos</a></li>
+          <li><a class="dropdown-item" href="#">Vacunación</a></li>
+          <li><a class="dropdown-item" href="#">Castración</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="homeAdmin.html">
+        <img src="img/logo.png" alt="Logo" width="70" height="70">
+      </a>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link seccion" aria-current="page" href="homeAdmin.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Perros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Gatos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Vacunación</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link seccion" href="#">Castración</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Botones -->
+      <ul class="nav nav-underline botones">
+        <li class="nav-item">
+          <button type="button" class="btn btn-lg ButtonPrimary"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-lg ButtonSecondary" onclick="window.location.href = 'home.html';"> <i class="fas fa-sign-out-alt" aria-hidden="true"></i> Cerrar sesión</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- ========== navbar ========== -->
+
+  <!-- ========== Contenido ========== -->
+  
+  <!-- ========== Contenido ========== -->
+  
+
+  <!-- ========== Bootstrap JS ========== -->
+  <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ========== Bootstrap JS ========== -->
+</body>
+</html>

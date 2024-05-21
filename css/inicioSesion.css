@@ -1,0 +1,44 @@
+@import 'css/estilosBase.css';
+
+.fondoBody{
+    background-image: url(/img/Fondo.png);
+}
+
+.tarjetaGrande{
+    background-color: var(--color-secundario);
+    margin: 2% 5%;
+}
+
+.olvidarContraseña{
+    text-decoration: none;
+}
+
+.botonSesion{
+    background-color: black;
+    color: white;
+}
+
+.botonSesion:hover{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.cardCustome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.formularioSesion{
+    width: 80%;
+}
+
+/* Móvil */
+@media (max-width: 767.98px) {
+    img{
+        display: none;
+    }
+}

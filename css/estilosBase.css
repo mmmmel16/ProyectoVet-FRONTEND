@@ -1,0 +1,12 @@
+
+:root {
+    /* Bordes */
+    --borde-redondo-tarjeta: 30px;
+    --borde-redondo-navbar-buscador: 30px;
+    --borde-redondo-botones-navbar-buscador: 50px;
+    --borde-redondo-input: 10px;
+
+    /* Colores */
+    --color-primario: #C9D787; /* Verde oscuro */
+    --color-secundario: #DBEE81; /* Verde claro */
+}

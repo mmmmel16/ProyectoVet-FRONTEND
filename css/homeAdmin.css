@@ -1,0 +1,92 @@
+@import 'css/estilosBase.css';
+
+body{
+    background-image: url(/img/Fondo.png);
+}
+
+.bienvenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-primario);
+    width: 300px;
+    border-radius: var(--borde-redondo-botones-navbar-buscador);
+    margin-top: 4%; 
+    background-color: white;
+}
+
+.seccionHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formularioHome{
+    background-color: white;
+    border-radius: var(--borde-redondo-navbar-buscador);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputBuscar{
+    border: none;
+    width: 100%;
+    padding-left: 2%;
+}
+
+/*Nuevo*/
+
+.btnFlecha{
+    background-color: var(--color-secundario);
+}
+
+.btnFlecha:hover{
+    background-color: var(--color-primario);
+}
+
+.paddingPerro{
+    padding-right: 8%;
+}
+
+.tarjeta{
+    border-radius: var(--borde-redondo-tarjeta);
+    width: 15rem;
+    height: 18rem;
+}
+
+.fondoSeccion{
+    margin: 0 3.8%;
+    background-color: var(--color-primario);
+    padding: 2%;
+    border-radius: var(--borde-redondo-tarjeta);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.textoTarjeta{
+    font-weight: bold;
+}
+
+/* Móvil */
+@media (max-width: 767.98px) {
+    .bienvenido{
+        margin-top: 2rem;
+        padding-top: 0.5rem;
+    }
+
+    .subtitulo{
+        margin-top: 1.5rem;
+    }
+
+    .formularioHome{
+        margin: 0 1.5rem;
+    }
+
+    .containerCard{
+        margin-top: 1rem;
+    }
+
+    .fondoSeccion{
+        margin-top: 1rem;
+    }
+}
