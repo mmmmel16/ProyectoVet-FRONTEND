@@ -1,0 +1,48 @@
+@import 'css/estilosBase.css';
+
+.footer{
+    background-color: var(--color-secundario);
+    color: rgb(34, 33, 33);
+    font-weight: bold;
+}
+
+.logos{
+    width: 2rem;
+    height: 2rem;
+}
+
+.copyPC{
+    margin-top: 11.938rem;
+}
+
+/* Móvil */
+@media (max-width: 767.98px) {
+    p{
+        font-size: 0.5rem;
+    }
+
+    .patita{
+        display: none;
+    }
+
+    .logo{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .logos{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .copyPC{
+        display: none;
+    }
+}
+
+/* PC */
+@media (min-width: 992px) {
+    .copyMovil{
+        display: none;
+    }
+}
