@@ -116,18 +116,13 @@
         <table id="usersTable" class="table table-bordered border-black mt-2">
           <thead>
             <tr>
-              <th>Fecha de Inscripcion</th>
               <th>ID</th>
               <th>Nombre</th>
               <th>Sexo</th>
               <th>Castrado</th>
               <th>Fecha de Castracion</th>
               <th>Vacunado</th>
-              <th>Fecha de Vacunacion</th>
-              <th>Dosis</th>
-              <th>Dueño</th>
               <th>Dirección</th>
-              <th>Telefono</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -177,11 +172,6 @@
               var cell5 = row.insertCell(4);
               var cell6 = row.insertCell(5);
               var cell7 = row.insertCell(6);
-              var cell8 = row.insertCell(7);
-              var cell9 = row.insertCell(8);
-              var cell10 = row.insertCell(9);
-              var cell11 = row.insertCell(10);
-              var cell12 = row.insertCell(11);
               cell1.textContent = user.id;
               cell2.textContent = user.name;
               cell3.textContent = user.email;

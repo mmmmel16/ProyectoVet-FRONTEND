@@ -1,0 +1,36 @@
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+
+  .upload-card {
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.image-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.addTable {
+    cursor: pointer;
+    color: green;
+}
+
+.delTable {
+    cursor: pointer;
+    color: red;
+}

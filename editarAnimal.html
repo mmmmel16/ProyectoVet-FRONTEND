@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/estilosBase.css">
   <link rel="stylesheet" href="css/navBar.css">
   <link rel="stylesheet" href="css/descripcionAnimal.css">
+  <link rel="stylesheet" href="css/agregarAnimal.css">
+
 
   <!-- ========== CSS ========== -->
 
@@ -79,6 +81,7 @@
 
   <!-- ========== Contenido ========== -->
   <div class="container-fluid" id="contenido">
+    <form>
     <!-- Fila 1 -->
     <div class="row">
       <div class="card cardDueño mt-4">
@@ -91,12 +94,10 @@
         <!-- Columna 1 Datos Animal -->
         <div class="col-md-6">
           <form>
-            <div class="mb-3">
-              <label class="form-label">Fecha de Inscripción:</label>
-              <input type="date" class="form-control" id="inscriptionDate" value="2024-04-24">            </div>
+
             <div class="mb-3">
               <label for="ID" class="form-label">Identificador:</label>
-              <input type="text" class="form-control" id="ID" value="123456">
+              <input type="text" class="form-control" id="id" value="123456">
           </div>
             <div class="mb-3">
               <label class="form-label">Nombre:</label>
@@ -104,7 +105,7 @@
             </div>
             <div class="mb-3">
               <label class="form-label">Especie:</label>
-              <select class="form-select" aria-label="Default select example" id="vaccine">
+              <select class="form-select" aria-label="Default select example" id="animalType">
                 <option value="Gato">Gato</option>
                 <option value="Perro">Perro</option> 
               </select>
@@ -125,13 +126,13 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Si" checked>
+                    <input class="form-check-input" type="radio" name="castrado" id="inlineRadio1" value="Si" checked>
                     <label class="form-check-label" for="inlineRadio1">Si</label>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="No">
+                    <input class="form-check-input" type="radio" name="castrado" id="inlineRadio2" value="No">
                     <label class="form-check-label" for="inlineRadio2">No</label>
                   </div>
                 </div>
@@ -149,6 +150,15 @@
                 </div>
               </div>
           </div>
+          <label for="customRange3" class="form-label p-2">Nivel de Agresividad:</label>
+          <input type="range" class="form-range" min="1" max="5" step="1" id="aggresive">
+          <div class="range-labels">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+          </div>
           </div>
         </div>
       </div>
@@ -157,37 +167,32 @@
     <!-- Fila 2 -->
     <div class="row">
       <div class="card cardDueño mt-4">
-        <h4>Vacunas:</h4> 
+        <h4>Plan Sanitario:</h4> 
           <table class="table table-bordered border-black mt-2">
             <thead>
               <tr class="text-center">
-                <th scope="col">#</th>
-                <th scope="col">Nombre</th>
+                <th scope="col">Medicamento</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">Dosis</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
                 <td>Moquillo </td>
                 <td class="text-center">24/04/24</td>
                 <td class="text-center">1</td>
               </tr>
               <tr>
-                <th scope="row">2</th>
                 <td>Gripe felina</td>
                 <td class="text-center">24/04/24</td>
                 <td class="text-center">2</td>
               </tr>
               <tr>
-                <th scope="row">3</th>
                 <td>Leucemia</td>
                 <td class="text-center">24/04/24</td>
                 <td class="text-center">2</td>
               </tr>
               <tr>
-                <th scope="row">4</th>
                 <td>Peritonitis infeciosa felina</td>
                 <td class="text-center">24/04/24</td>
                 <td class="text-center">2</td>
@@ -205,15 +210,19 @@
         <div class="col-md-6">
           <div class="mb-3">
             <label for="Nombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="Nombre" value="Marcela Fernandez">
+            <input type="text" class="form-control" id="ownerName" value="Marcela Fernandez">
           </div>
           <div class="mb-3">
             <label for="Direccion" class="form-label">Direccion:</label>
-            <input type="text" class="form-control" id="Direccion" value="Calle 110 y 7 Nro 123">
+            <input type="text" class="form-control" id="ownerAddress" value="Calle 110 y 7 Nro 123">
+          </div>
+          <div class="mb-3">
+            <label for="Localidad" class="form-label">Localidad:</label>
+            <input type="text" class="form-control" id="ownerCity" value="General Pico">
           </div>
           <div class="mb-3">
             <label for="Telefono" class="form-label">Telefono:</label>
-            <input type="text" class="form-control" id="Telefono" value="2302404040">
+            <input type="text" class="form-control" id="ownerPhone" value="2302404040">
           </div>
         </div>
       </div>
@@ -221,12 +230,12 @@
   </div>
   <div class="container-fluid d-flex justify-content-center mt-4" id="contenido">
     <button type="button" class="btn btn-xl ButtonCancel me-2">Cancelar</button>
-    <button type="button" class="btn btn-xl ButtonSecondary">Guardar</button>
+    <button type="submit" class="btn btn-xl ButtonSecondary">Guardar</button>
   </div>
   <div class="mt-4"></div>
+    </form>
 </div>
-  <div class="mt-4"></div>
-  </div>
+
   <!-- ========== Contenido ========== -->
   
 
