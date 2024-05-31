@@ -65,7 +65,7 @@
       <!-- Botones -->
       <ul class="nav nav-underline botones">
         <li class="nav-item">
-          <button type="button" class="btn btn-lg ButtonPrimary"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
+          <button type="button" class="btn btn-lg ButtonPrimary" onclick="window.location.href = 'agregarAnimal.html';"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
         </li>
         <li class="nav-item">
           <button type="button" class="btn btn-lg ButtonSecondary" onclick="window.location.href = 'home.html';"> <i class="fas fa-sign-out-alt" aria-hidden="true"></i> Cerrar sesión</button>
@@ -83,19 +83,12 @@
       <div class="col-md-1 imagenes d-flex flex-column">
         <img src="/img/imagenDescripcion1.png" class="items my-1 img-fluid" alt="">
         <img src="/img/imagenDescripcion2.png" class="items my-1 img-fluid" alt="">
-        <a href="#" class="text-decoration-none text-black">
-          <div class="items my-1 py-2 d-flex align-items-center justify-content-center">
-            <i class="far fa-plus-square fa-2x" aria-hidden="true"></i>
-          </div>
-        </a>
       </div>
 
       <!-- Columna 2 -->
       <div class="col-md-4">
         <img src="/img/imagenDescripcion3.png" class="object-fit-none item img-fluid" alt="...">
-        <div class="text-center my-4">
-          <h5>Inscripto desde _______</h5>
-        </div>
+        <div class="text-center my-4"></div>
         <div class="card tarjetaCara px-5 py-2">
           <div class="card-body">
             <p class="card-text">Tamaño:  _______</p>
@@ -113,8 +106,9 @@
           <div class="row">
             <div class="col-12 col-md-auto mt-2">
               <div class="d-flex justify-content-center justify-content-md-start">
-                <span class="badge rounded-pill id">ID ____</span>
+                <span class="badge rounded-pill id mx-2">ID ____</span>
                 <span id="castrado"  class="badge rounded-pill castrado mx-2">Castrado</span>
+                <span id="agresivo"  class="badge rounded-pill agresivo mx-2">Agresivo</span>
               </div>
             </div>
             <div class="col-12 col-md"></div>
@@ -172,6 +166,7 @@
               <div class="d-flex justify-content-center justify-content-md-start">
                 <span class="badge rounded-pill id">ID ____</span>
                 <span id="castrado"  class="badge rounded-pill castrado mx-2">Castrado</span>
+                <span id="agresivo"  class="badge rounded-pill agresivo mx-2">Agresivo</span>
               </div>
             </div>
           </div>
@@ -197,9 +192,7 @@
         <div class="my-4">
           <iframe class="rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51866.44198844432!2d-63.79239766426402!3d-35.660929295895556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c37d4f9847b43f%3A0x6b4fc7aecf7b9d89!2sGral.%20Pico%2C%20La%20Pampa!5e0!3m2!1ses-419!2sar!4v1715980335050!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="text-center my-4">
-          <h5>Inscripto desde _______</h5>
-        </div>
+        <div class="text-center my-4"></div>
         <div class="card tarjetaCara px-5 py-2">
           <div class="card-body">
             <p class="card-text">Tamaño:  _______</p>
@@ -230,7 +223,7 @@
         <div class="card-body d-flex">
           <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mt-1">
           <div class="d-flex flex-column">
-            <h2 class="card-title mx-3 text-black">Vacunas</h2>
+            <h2 class="card-title mx-3 text-black">Plan sanitario</h2>
 
             <!-- Tabla -->
             <table class="table table-bordered border-black mt-3">

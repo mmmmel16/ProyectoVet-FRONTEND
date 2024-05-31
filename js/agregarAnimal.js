@@ -1,0 +1,74 @@
+function addRowToTable() {
+    // Crear una nueva fila
+    var newRow = document.createElement('tr');
+
+    // Crear celdas para la nueva fila
+    var nameCell = document.createElement('td');
+    var dateCell = document.createElement('td');
+    var dosisCell = document.createElement('td');
+    var actionsCell = document.createElement('td');
+
+    // Hacer las celdas editables
+    nameCell.contentEditable = 'true';
+    nameCell.classList.add('editable');
+    dateCell.contentEditable = 'true';
+    dateCell.classList.add('editable');
+    dosisCell.contentEditable = 'true';
+    dosisCell.classList.add('editable');
+
+    // Crear botón de eliminar
+    var deleteBtn = document.createElement('i');
+    deleteBtn.classList.add('fas', 'fa-minus-circle','delTable','fa-2x');
+    deleteBtn.addEventListener('click', function() {
+        this.parentElement.parentElement.remove();
+    });
+
+    // Añadir el botón de eliminar a la celda de acciones
+    actionsCell.appendChild(deleteBtn);
+
+    // Añadir celdas a la fila
+    newRow.appendChild(nameCell);
+    newRow.appendChild(dateCell);
+    newRow.appendChild(dosisCell);
+    newRow.appendChild(actionsCell);
+
+    // Añadir la fila al cuerpo de la tabla
+    document.querySelector('#editableTable tbody').appendChild(newRow);
+}
+
+document.getElementById('addRowIcon').addEventListener('click', addRowToTable);
+
+
+
+
+
+
+function uploadImage() {
+    document.getElementById('uploadCard').addEventListener('click', function() {
+        document.getElementById('fileInput').click();
+    });
+
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+        var files = event.target.files;
+        var imageContainer = document.getElementById('imageContainer');
+        imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+        Array.from(files).forEach(file => {
+            if (file.type.startsWith('image/')) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var img = document.createElement('img');
+                    img.src = e.target.result;
+                    imageContainer.appendChild(img);
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+}
+
+// Llamar a la función para que el código se ejecute
+uploadImage();
+
+function goBack() {
+    window.history.back();
+}
