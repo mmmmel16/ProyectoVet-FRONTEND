@@ -68,3 +68,7 @@ function uploadImage() {
 
 // Llamar a la función para que el código se ejecute
 uploadImage();
+
+function goBack() {
+    window.history.back();
+}

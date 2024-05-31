@@ -38,6 +38,18 @@
     justify-content: center;
 }
 
+.agresivo{
+    border: 2px solid #f70004;
+    width: 7rem;
+    height: 2rem;
+    color: black;
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .cardDueño{
     background-color: var(--color-primario);
     border-radius: var(--borde-redondo-tarjeta);

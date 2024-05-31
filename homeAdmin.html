@@ -52,7 +52,7 @@
             <a class="nav-link seccion" href="#">Perros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link seccion" href="#">Gatos</a>
+            <a class="nav-link seccion" href="/listados.html">Gatos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link seccion" href="#">Vacunación</a> 
@@ -66,7 +66,7 @@
       <!-- Botones -->
       <ul class="nav nav-underline botones">
         <li class="nav-item">
-          <button type="button" class="btn btn-lg ButtonPrimary"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
+          <button type="button" class="btn btn-lg ButtonPrimary" onclick="window.location.href = 'agregarAnimal.html';"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
         </li>
         <li class="nav-item">
           <button type="button" class="btn btn-lg ButtonSecondary" onclick="window.location.href = 'home.html';"> <i class="fas fa-sign-out-alt" aria-hidden="true"></i> Cerrar sesión</button>
@@ -89,7 +89,7 @@
     <article>
       <form class="d-flex formularioHome" role="search">
         <input class="inputBuscar" type="search" placeholder="Escriba el id del animal" aria-label="Buscador">
-        <button class="btn botonBuscar" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <button class="btn botonBuscar"><i class="fa fa-search" aria-hidden="true"></i></button>
       </form>
     </article>
   </section>
@@ -113,8 +113,8 @@
           <img src="img/gato.png" class="card-img-top paddingPerro" alt="Imagen de gato">
           <div class="card-body">
             <div class="btn-group btnFlecha" role="group" aria-label="Basic example">
-              <button type="button" class="btn textoTarjeta">Gatos</button>
-              <button type="button" class="btn"><i class="fa fa-arrow-right iconFlecha" aria-hidden="true"></i></button>
+              <button type="button" class="btn textoTarjeta" onclick="window.location.href = 'listados.html';">Gatos</button>
+              <button type="button" class="btn" onclick="window.location.href = 'listados.html';"><i class="fa fa-arrow-right iconFlecha" aria-hidden="true"></i></button>
             </div>
           </div>
         </div>
