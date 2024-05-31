@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="css/#">
   <link rel="stylesheet" href="css/estilosBase.css">
   <link rel="stylesheet" href="css/navBar.css">
+  <link rel="stylesheet" href="css/descripcionAnimal.css">
+  <link rel="stylesheet" href="css/agregarAnimal.css">
+
+
   <!-- ========== CSS ========== -->
 
   <!-- ========== Font Awesome ========== -->
@@ -76,7 +80,162 @@
   <!-- ========== navbar ========== -->
 
   <!-- ========== Contenido ========== -->
+  <div class="container-fluid" id="contenido">
+    <form>
+    <!-- Fila 1 -->
+    <div class="row">
+      <div class="card cardDueño mt-4">
+        <div class="d-flex">
+          <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mb-1">
+          <h2 class="card-title mx-3 text-black">Datos del Animal</h2>
+        </div>
+    <!-- Fila 1 Datos Animal -->
+      <div class="row">
+        <!-- Columna 1 Datos Animal -->
+        <div class="col-md-6">
+          <form>
+
+            <div class="mb-3">
+              <label for="ID" class="form-label">Identificador:</label>
+              <input type="text" class="form-control" id="id" value="123456">
+          </div>
+            <div class="mb-3">
+              <label class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="animalName" value="Chocolate blanco">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Especie:</label>
+              <select class="form-select" aria-label="Default select example" id="animalType">
+                <option value="Gato">Gato</option>
+                <option value="Perro">Perro</option> 
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Sexo:</label>
+              <select class="form-select" aria-label="Default select example" id="gender">
+                <option value="Macho">Macho</option>
+                <option value="Hembra">Hembra</option> 
+              </select>
+            </div>
+          </form>
+        </div>
+          <!-- Columna 2 Datos Animal -->
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label class="form-label">Castrado:</label>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="castrado" id="inlineRadio1" value="Si" checked>
+                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="castrado" id="inlineRadio2" value="No">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Fecha de Castración:</label>
+              <input type="date" class="form-control" id="castratedDate" value="2024-04-24">            </div>
+            <div class="card p-3">
+              <div class="card-body">
+                <div class="col-md-12">
+                  <img src="img/imagenDescripcion1.png" class="img-fluid" alt="Imagen 1">
+                  <img src="img/imagenDescripcion2.png" class="img-fluid" alt="Imagen 2">
+                  <label class="custom-file-label" for="imageUpload">Inserte su imagen aquí<i class="fas fa-upload mx-2 fa-2x"></i></label> 
+                </div>
+              </div>
+          </div>
+          <label for="customRange3" class="form-label p-2">Nivel de Agresividad:</label>
+          <input type="range" class="form-range" min="1" max="5" step="1" id="aggresive">
+          <div class="range-labels">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
   
+    <!-- Fila 2 -->
+    <div class="row">
+      <div class="card cardDueño mt-4">
+        <h4>Plan Sanitario:</h4> 
+          <table class="table table-bordered border-black mt-2">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">Medicamento</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Dosis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Moquillo </td>
+                <td class="text-center">24/04/24</td>
+                <td class="text-center">1</td>
+              </tr>
+              <tr>
+                <td>Gripe felina</td>
+                <td class="text-center">24/04/24</td>
+                <td class="text-center">2</td>
+              </tr>
+              <tr>
+                <td>Leucemia</td>
+                <td class="text-center">24/04/24</td>
+                <td class="text-center">2</td>
+              </tr>
+              <tr>
+                <td>Peritonitis infeciosa felina</td>
+                <td class="text-center">24/04/24</td>
+                <td class="text-center">2</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+  
+<!-- Fila 3 -->
+  <div class="row">
+    <div class="card cardDueño mt-4">
+      <h4>Datos del dueño:</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="Nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="ownerName" value="Marcela Fernandez">
+          </div>
+          <div class="mb-3">
+            <label for="Direccion" class="form-label">Direccion:</label>
+            <input type="text" class="form-control" id="ownerAddress" value="Calle 110 y 7 Nro 123">
+          </div>
+          <div class="mb-3">
+            <label for="Localidad" class="form-label">Localidad:</label>
+            <input type="text" class="form-control" id="ownerCity" value="General Pico">
+          </div>
+          <div class="mb-3">
+            <label for="Telefono" class="form-label">Telefono:</label>
+            <input type="text" class="form-control" id="ownerPhone" value="2302404040">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid d-flex justify-content-center mt-4" id="contenido">
+    <button type="button" class="btn btn-xl ButtonCancel me-2">Cancelar</button>
+    <button type="submit" class="btn btn-xl ButtonSecondary">Guardar</button>
+  </div>
+  <div class="mt-4"></div>
+    </form>
+</div>
+
   <!-- ========== Contenido ========== -->
   
 
