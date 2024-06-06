@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,7 +81,7 @@
   
   <div class="container-fluid" id="contenido">
     <!-- Fila 1 -->
-    <form id="simpleForm">
+    <form enctype="multipart/form-data">
     <div class="row">
       <div class="card cardDueño mt-4">
         <div class="d-flex">
@@ -94,15 +94,15 @@
           <div class="col-md-6">
               <div class="mb-3">
                 <label class="form-label">Identificador:</label>
-                <input type="text" class="form-control" id="id">
+                <input type="text" class="form-control" id="id" name="id" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="animalName">
+                <input type="text" class="form-control" id="animalName" name="animalName" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">Especie:</label>
-                <select class="form-select" id="animalType">
+                <select class="form-select" id="animalType" name="animalType" required>
                   <option disabled selected value></option>
                   <option value="Gato">Gato</option>
                   <option value="Perro">Perro</option> 
@@ -110,7 +110,7 @@
               </div>
               <div class="mb-3">
                 <label class="form-label">Sexo:</label>
-                <select class="form-select" id="gender">
+                <select class="form-select" id="gender" name="gender" required>
                   <option disabled selected value> </option>
                   <option value="Macho">Macho</option>
                   <option value="Hembra">Hembra</option> 
@@ -138,28 +138,29 @@
             </div>
             <div class="mb-3">
               <label class="form-label">Fecha de Castración:</label>
-              <input type="date" class="form-control" id="castratedDate">
+              <input type="date" class="form-control" id="castratedDate" name="castratedDate" required>
             </div>
             <div class="card p-3">
-              <div class="card-body upload-card"id="uploadCard">
+              <div class="card-body upload-card"id="uploadCard" name="uploadCard">
                 <div class="col-md-12">
                   <label class="custom-file-label" for="imageUpload">Inserte su imagen aquí
                     <i class="fas fa-upload mx-2 fa-2x"></i></label> 
                 </div>
               </div>
-              <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+              <input type="file" id="fileInput" name="fileInput" accept="image/*" multiple style="display: none;">
               <div class="image-container" id="imageContainer"></div>
 
           </div>
-          <label for="customRange3" class="form-label p-2">Nivel de Agresividad:</label>
-          <input type="range" class="form-range" min="1" max="5" step="1" id="aggresive" >
-          <div class="range-labels">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-          </div>
+          <body>
+            <label class="form-label p-2">Nivel de Agresividad:</label>
+            <input type="range" class="form-range" min="1" max="5" step="1" id="aggresive" name="aggresive" value="1">
+            <div class="range-labels">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+            </div>
           </div>
         </div>
       </div>
@@ -168,11 +169,11 @@
     <!-- Fila 2 -->
     <div class="row">
       <div class="card cardDueño mt-4">
-        <h4>Plan Sanitario:</h4>
-        <div class="row">
-          <div class="col-md-6"></div>
-          <div class="col-md-4">
-        <i class="fas fa-plus-circle mx-2 fa-2x addTable" id="addRowIcon"></i></div>
+        <div class="d-flex">
+          <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mb-1">
+          <h4 class="card-title mx-3 text-black">Plan Sanitario:</h4>
+        </div>
+        <div class="row mt-2">
         <table id="editableTable" class="table table-bordered border-black mt-2">
             <thead>
                 <tr>
@@ -186,6 +187,8 @@
                 <!-- Filas dinámicas se agregarán aquí -->
             </tbody>
         </table>
+        <div class="d-flex justify-content-center">
+      <i class="fas fa-plus-circle mx-2 fa-2x addTable" id="addRowIcon"></i></div>
       </div>
     </div>
     </div>
@@ -193,24 +196,27 @@
     <!-- Fila 3 -->
     <div class="row">
       <div class="card cardDueño mt-4">
-        <h4>Datos del dueño:</h4>
+        <div class="d-flex">
+          <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mb-1">
+          <h4 class="card-title mx-3 text-black">Datos del dueño:</h4>
+        </div>
         <div class="row">
           <div class="col-md-6">
             <div class="mb-3">
               <label for="Nombre" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" id="ownerName">
+              <input type="text" class="form-control" id="ownerName" name="ownerName" required>
             </div>
             <div class="mb-3">
               <label for="Direccion" class="form-label">Direccion:</label>
-              <input type="text" class="form-control" id="ownerAddress">
+              <input type="text" class="form-control" id="ownerAddress" name="ownerAddress" required>
             </div>
             <div class="mb-3">
               <label for="Localidad" class="form-label">Localidad:</label>
-              <input type="text" class="form-control" id="ownerCity">
+              <input type="text" class="form-control" id="ownerCity" name="ownerCity" required>
             </div>
             <div class="mb-3">
               <label for="Telefono" class="form-label">Telefono:</label>
-              <input type="text" class="form-control" id="ownerPhone">
+              <input type="text" class="form-control" id="ownerPhone" name="ownerPhone" required>
             </div>
           </div>
         </div>
@@ -218,14 +224,13 @@
     </div>
     <div class="container-fluid d-flex justify-content-center mt-4" id="contenido">
       <button type="button" class="btn btn-xl ButtonCancel me-2">Cancelar</button>
-      <button type="submit" class="btn btn-xl ButtonSecondary">Guardar</button>
+      <button type="submit" class="btn btn-xl botonGuardar">Guardar</button>
     </div>
     <div class="mt-4"></div>
   </form>
   </div>
 
 <script src="js/agregarAnimal.js"></script>
-
 
   <!-- ========== Contenido ========== -->
   
