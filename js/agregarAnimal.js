@@ -23,6 +23,10 @@ function uploadImage() {
     });
 }
 
+function goBack(){
+    window.history.back();
+}
+
 uploadImage();
 
 //Creacion de filas para plan sanitario
