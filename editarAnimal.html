@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <!-- ========== Bootstrap  ========== -->
   <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
   <!-- ========== Bootstrap  ========== -->
-  
+
   <!-- ========== CSS ========== -->
   <link rel="stylesheet" href="css/#">
   <link rel="stylesheet" href="css/estilosBase.css">
@@ -17,7 +17,6 @@
 
 
   <!-- ========== CSS ========== -->
-
   <!-- ========== Font Awesome ========== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- ========== Font Awesome ========== -->
@@ -69,7 +68,7 @@
       <!-- Botones -->
       <ul class="nav nav-underline botones">
         <li class="nav-item">
-          <button type="button" class="btn btn-lg ButtonPrimary" onclick="window.location.href = 'agregarAnimal.html';"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
+          <button type="button" class="btn btn-lg ButtonPrimary disabled"> <i class="fas fa-plus-circle"></i> Agregar animal</button>
         </li>
         <li class="nav-item">
           <button type="button" class="btn btn-lg ButtonSecondary" onclick="window.location.href = 'home.html';"> <i class="fas fa-sign-out-alt" aria-hidden="true"></i> Cerrar sesión</button>
@@ -80,53 +79,53 @@
   <!-- ========== navbar ========== -->
 
   <!-- ========== Contenido ========== -->
+  
   <div class="container-fluid" id="contenido">
-    <form>
     <!-- Fila 1 -->
+    <form enctype="multipart/form-data">
     <div class="row">
       <div class="card cardDueño mt-4">
         <div class="d-flex">
           <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mb-1">
           <h2 class="card-title mx-3 text-black">Datos del Animal</h2>
         </div>
-    <!-- Fila 1 Datos Animal -->
-      <div class="row">
-        <!-- Columna 1 Datos Animal -->
-        <div class="col-md-6">
-          <form>
-
-            <div class="mb-3">
-              <label for="ID" class="form-label">Identificador:</label>
-              <input type="text" class="form-control" id="id" value="123456">
-          </div>
-            <div class="mb-3">
-              <label class="form-label">Nombre:</label>
-              <input type="text" class="form-control" id="animalName" value="Chocolate blanco">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Especie:</label>
-              <select class="form-select" aria-label="Default select example" id="animalType">
-                <option value="Gato">Gato</option>
-                <option value="Perro">Perro</option> 
-              </select>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Sexo:</label>
-              <select class="form-select" aria-label="Default select example" id="gender">
-                <option value="Macho">Macho</option>
-                <option value="Hembra">Hembra</option> 
-              </select>
-            </div>
-          </form>
-        </div>
-          <!-- Columna 2 Datos Animal -->
+        <!-- Fila 1 Datos Animal -->
+        <div class="row">
+          <!-- Columna 1 Datos Animal -->
           <div class="col-md-6">
+              <div class="mb-3">
+                <label class="form-label">Identificador:</label>
+                <input type="text" class="form-control" id="id" name="id" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="animalName" name="animalName" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Especie:</label>
+                <select class="form-select" id="animalType" name="animalType" required>
+                  <option disabled selected value></option>
+                  <option value="Gato">Gato</option>
+                  <option value="Perro">Perro</option> 
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Sexo:</label>
+                <select class="form-select" id="gender" name="gender" required>
+                  <option disabled selected value> </option>
+                  <option value="Macho">Macho</option>
+                  <option value="Hembra">Hembra</option> 
+                </select>
+              </div>
+          </div>
+          <!-- Columna 2 Datos Animal -->
+          <div class="col-md-5">
             <div class="mb-3">
               <label class="form-label">Castrado:</label>
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="castrado" id="inlineRadio1" value="Si" checked>
+                    <input class="form-check-input" type="radio" name="castrado" id="inlineRadio1" value="Si">
                     <label class="form-check-label" for="inlineRadio1">Si</label>
                   </div>
                 </div>
@@ -140,25 +139,29 @@
             </div>
             <div class="mb-3">
               <label class="form-label">Fecha de Castración:</label>
-              <input type="date" class="form-control" id="castratedDate" value="2024-04-24">            </div>
+              <input type="date" class="form-control" id="castratedDate" name="castratedDate" required>
+            </div>
             <div class="card p-3">
-              <div class="card-body">
+              <div class="card-body upload-card"id="uploadCard" name="uploadCard">
                 <div class="col-md-12">
-                  <img src="img/imagenDescripcion1.png" class="img-fluid" alt="Imagen 1">
-                  <img src="img/imagenDescripcion2.png" class="img-fluid" alt="Imagen 2">
-                  <label class="custom-file-label" for="imageUpload">Inserte su imagen aquí<i class="fas fa-upload mx-2 fa-2x"></i></label> 
+                  <label class="custom-file-label" for="imageUpload">Inserte su imagen aquí
+                    <i class="fas fa-upload mx-2 fa-2x"></i></label> 
                 </div>
               </div>
+              <input type="file" id="fileInput" name="fileInput" accept="image/*" multiple style="display: none;">
+              <div class="image-container" id="imageContainer"></div>
+
           </div>
-          <label for="customRange3" class="form-label p-2">Nivel de Agresividad:</label>
-          <input type="range" class="form-range" min="1" max="5" step="1" id="aggresive">
-          <div class="range-labels">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-          </div>
+          <body>
+            <label for="customRange3" class="form-label p-2">Nivel de Agresividad:</label>
+            <input type="range" class="form-range" min="1" max="5" step="1" id="aggresive" name="aggresive" value="1">
+            <div class="range-labels">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+            </div>
           </div>
         </div>
       </div>
@@ -167,78 +170,71 @@
     <!-- Fila 2 -->
     <div class="row">
       <div class="card cardDueño mt-4">
-        <h4>Plan Sanitario:</h4> 
-          <table class="table table-bordered border-black mt-2">
+        <div class="d-flex">
+          <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mb-1">
+          <h4 class="card-title mx-3 text-black">Plan Sanitario:</h4>
+        </div>
+        <div class="row mt-2">
+        <table id="editableTable" class="table table-bordered border-black mt-2">
             <thead>
-              <tr class="text-center">
-                <th scope="col">Medicamento</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Dosis</th>
-              </tr>
+                <tr>
+                    <th>Medicamento</th>
+                    <th>Fecha</th>
+                    <th>Dosis</th>
+                    <th></th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Moquillo </td>
-                <td class="text-center">24/04/24</td>
-                <td class="text-center">1</td>
-              </tr>
-              <tr>
-                <td>Gripe felina</td>
-                <td class="text-center">24/04/24</td>
-                <td class="text-center">2</td>
-              </tr>
-              <tr>
-                <td>Leucemia</td>
-                <td class="text-center">24/04/24</td>
-                <td class="text-center">2</td>
-              </tr>
-              <tr>
-                <td>Peritonitis infeciosa felina</td>
-                <td class="text-center">24/04/24</td>
-                <td class="text-center">2</td>
-              </tr>
+                <!-- Filas dinámicas se agregarán aquí -->
             </tbody>
-          </table>
+        </table>
+        <div class="d-flex justify-content-center">
+      <i class="fas fa-plus-circle mx-2 fa-2x addTable" id="addRowIcon"></i></div>
       </div>
-  </div>
+    </div>
+    </div>
   
-<!-- Fila 3 -->
-  <div class="row">
-    <div class="card cardDueño mt-4">
-      <h4>Datos del dueño:</h4>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="Nombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="ownerName" value="Marcela Fernandez">
-          </div>
-          <div class="mb-3">
-            <label for="Direccion" class="form-label">Direccion:</label>
-            <input type="text" class="form-control" id="ownerAddress" value="Calle 110 y 7 Nro 123">
-          </div>
-          <div class="mb-3">
-            <label for="Localidad" class="form-label">Localidad:</label>
-            <input type="text" class="form-control" id="ownerCity" value="General Pico">
-          </div>
-          <div class="mb-3">
-            <label for="Telefono" class="form-label">Telefono:</label>
-            <input type="text" class="form-control" id="ownerPhone" value="2302404040">
+    <!-- Fila 3 -->
+    <div class="row">
+      <div class="card cardDueño mt-4">
+        <div class="d-flex">
+          <img src="img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mb-1">
+          <h4 class="card-title mx-3 text-black">Datos del dueño:</h4>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="Nombre" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="ownerName" name="ownerName" required>
+            </div>
+            <div class="mb-3">
+              <label for="Direccion" class="form-label">Direccion:</label>
+              <input type="text" class="form-control" id="ownerAddress" name="ownerAddress" required>
+            </div>
+            <div class="mb-3">
+              <label for="Localidad" class="form-label">Localidad:</label>
+              <input type="text" class="form-control" id="ownerCity" name="ownerCity" required>
+            </div>
+            <div class="mb-3">
+              <label for="Telefono" class="form-label">Telefono:</label>
+              <input type="text" class="form-control" id="ownerPhone" name="ownerPhone" required>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="container-fluid d-flex justify-content-center mt-4" id="contenido">
+      <button type="button" class="btn btn-xl ButtonCancel me-2">Cancelar</button>
+      <button type="submit" class="btn btn-xl botonGuardar">Guardar</button>
+    </div>
+    <div class="mt-4"></div>
+  </form>
   </div>
-  <div class="container-fluid d-flex justify-content-center mt-4" id="contenido">
-    <button type="button" class="btn btn-xl ButtonCancel me-2">Cancelar</button>
-    <button type="submit" class="btn btn-xl ButtonSecondary">Guardar</button>
-  </div>
-  <div class="mt-4"></div>
-    </form>
-</div>
+
+<script src="js/editarAnimal.js"></script>
 
   <!-- ========== Contenido ========== -->
   
-
   <!-- ========== Bootstrap JS ========== -->
   <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   <!-- ========== Bootstrap JS ========== -->

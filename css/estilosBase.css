@@ -12,7 +12,8 @@
 }
 
 .scrollable-div {
-    overflow-y: scroll;
+    overflow-y: hidden;
+    overflow-x: scroll;
   }
 
 
@@ -20,3 +21,8 @@
     border-radius: var(--borde-redondo-botones-navbar-buscador);
     background-color: lightgray;
 }
+
+
+
+
+

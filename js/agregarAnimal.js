@@ -1,48 +1,5 @@
-function addRowToTable() {
-    // Crear una nueva fila
-    var newRow = document.createElement('tr');
 
-    // Crear celdas para la nueva fila
-    var nameCell = document.createElement('td');
-    var dateCell = document.createElement('td');
-    var dosisCell = document.createElement('td');
-    var actionsCell = document.createElement('td');
-
-    // Hacer las celdas editables
-    nameCell.contentEditable = 'true';
-    nameCell.classList.add('editable');
-    dateCell.contentEditable = 'true';
-    dateCell.classList.add('editable');
-    dosisCell.contentEditable = 'true';
-    dosisCell.classList.add('editable');
-
-    // Crear botón de eliminar
-    var deleteBtn = document.createElement('i');
-    deleteBtn.classList.add('fas', 'fa-minus-circle','delTable','fa-2x');
-    deleteBtn.addEventListener('click', function() {
-        this.parentElement.parentElement.remove();
-    });
-
-    // Añadir el botón de eliminar a la celda de acciones
-    actionsCell.appendChild(deleteBtn);
-
-    // Añadir celdas a la fila
-    newRow.appendChild(nameCell);
-    newRow.appendChild(dateCell);
-    newRow.appendChild(dosisCell);
-    newRow.appendChild(actionsCell);
-
-    // Añadir la fila al cuerpo de la tabla
-    document.querySelector('#editableTable tbody').appendChild(newRow);
-}
-
-document.getElementById('addRowIcon').addEventListener('click', addRowToTable);
-
-
-
-
-
-
+//Input imagenes
 function uploadImage() {
     document.getElementById('uploadCard').addEventListener('click', function() {
         document.getElementById('fileInput').click();
@@ -66,9 +23,58 @@ function uploadImage() {
     });
 }
 
-// Llamar a la función para que el código se ejecute
-uploadImage();
-
-function goBack() {
+function goBack(){
     window.history.back();
 }
+
+uploadImage();
+
+//Creacion de filas para plan sanitario
+function addRowToTable() {
+    // Crear una nueva fila
+    var newRow = document.createElement('tr');
+
+    // Crear celdas para la nueva fila
+    var nameCell = document.createElement('td');
+    var dateCell = document.createElement('td');
+    var dosisCell = document.createElement('td');
+    var actionsCell = document.createElement('td');
+
+    // Crear inputs para las celdas
+    var nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameCell.appendChild(nameInput);
+    nameCell.classList.add('input-cell');
+
+    var dateInput = document.createElement('input');
+    dateInput.type = 'date';
+    dateCell.appendChild(dateInput);
+    dateCell.classList.add('input-cell');
+
+    var dosisInput = document.createElement('input');
+    dosisInput.type = 'number';
+    dosisCell.appendChild(dosisInput);
+    dosisCell.classList.add('input-cell');
+
+    // Crear botón de eliminar
+    var deleteBtn = document.createElement('i');
+    deleteBtn.classList.add('fas', 'fa-minus-circle','delTable','fa-2x');
+    deleteBtn.addEventListener('click', function() {
+        this.parentElement.parentElement.remove();
+    });
+
+    // Añadir el botón de eliminar a la celda de acciones
+    actionsCell.appendChild(deleteBtn);
+
+    // Añadir celdas a la fila
+    newRow.appendChild(nameCell);
+    newRow.appendChild(dateCell);
+    newRow.appendChild(dosisCell);
+    newRow.appendChild(actionsCell);
+
+    // Añadir la fila al cuerpo de la tabla
+    document.querySelector('#editableTable tbody').appendChild(newRow);
+}
+
+document.getElementById('addRowIcon').addEventListener('click', addRowToTable);
+
